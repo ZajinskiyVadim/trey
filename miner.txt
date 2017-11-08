@@ -1,0 +1,14 @@
+port=8525
+
+mining_ip=pool.bismuth.online
+mining_threads=8
+tor=0
+
+miner_address=4caaed563b193587baeecf04111344328018e53af4e22920652a072c
+d
+max_diff=150
+
+miner_name=treybl
+nonce_time=10
+
+hashcount=20000
