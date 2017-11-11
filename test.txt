@@ -1,0 +1,9 @@
+port=8525
+server_ip=185.125.46.74
+threads=8
+tor=0
+address=4caaed563b193587baeecf04111344328018e53af4e22920652a072c
+max_diff=150
+name=test
+nonce_time=10
+unitcount=200000
