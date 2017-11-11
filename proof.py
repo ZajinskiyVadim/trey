@@ -1,4 +1,4 @@
-# optihash.py v 0.30 to be used with Python3.5 or better
+# to be used with Python3.5 or better
 # Optimized CPU based cluster only
 # Copyright 2017
 # .
