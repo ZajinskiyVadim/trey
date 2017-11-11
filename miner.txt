@@ -1,6 +1,6 @@
 port=8525
 
-mining_ip=pool.bismuth.online
+mining_ip=185.14.29.167
 mining_threads=8
 tor=0
 
