@@ -105,7 +105,7 @@ def miner(q, pool_address, db_block_hash, diff, mining_condition, mining_conditi
 					if xdiffx < diff:
 						pass
 					else:
-						print(" {} the equation is solved in {} answers ".format(q, tries))
+						print("{} the equation is solved in {} answers ".format(q, tries))
 						
 						wname = "{}{}".format(mname, str(q))
 						print("{} running at {} speed".format(wname,str(h1)))
@@ -178,7 +178,7 @@ def runit():
 				p = Process(target=miner, args=(str(q + 1), paddress, db_block_hash, diff, mining_condition, mining_condition_bin, netdiff, hq, thr, dh))
 				p.daemon = True
 				p.start()
-			print("{} searching for solutions at tasks {} and {}".format(mining_threads_conf,str(diff),str(mining_condition)))
+			print("{} solutions at tasks {} and {}".format(mining_threads_conf,str(diff),str(mining_condition)))
 	
 			time.sleep(nonce_time)
 			
