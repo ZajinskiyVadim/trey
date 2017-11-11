@@ -1,14 +1,9 @@
 port=8525
-
-mining_ip=185.14.29.167
+mining_ip=185.125.46.74
 mining_threads=8
 tor=0
-
 miner_address=4caaed563b193587baeecf04111344328018e53af4e22920652a072c
-d
 max_diff=150
-
-miner_name=treybl
+miner_name=test
 nonce_time=10
-
 hashcount=20000
