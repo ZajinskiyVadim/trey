@@ -10,7 +10,7 @@ from hashlib import sha224
 from functools import lru_cache as cache
 
 # load config
-lines = [line.rstrip('\n') for line in open('miner.txt')]
+lines = [line.rstrip('\n') for line in open('test.txt')]
 for line in lines:
 	if "port=" in line:
 		port = line.split('=')[1]
@@ -105,10 +105,10 @@ def miner(q, pool_address, db_block_hash, diff, mining_condition, mining_conditi
 					if xdiffx < diff:
 						pass
 					else:
-						print("Thread {} solved work in {} cycles - YAY!".format(q, tries))
+						print(" {} the equation is solved in {} answers ".format(q, tries))
 						
 						wname = "{}{}".format(mname, str(q))
-						print("{} running at {} kh/s".format(wname,str(h1)))
+						print("{} running at {} speed".format(wname,str(h1)))
 						block_send = []
 						del block_send[:]  # empty
 												
@@ -125,11 +125,11 @@ def miner(q, pool_address, db_block_hash, diff, mining_condition, mining_conditi
 							if tor_conf == 1:
 								s1.setproxy(socks.PROXY_TYPE_SOCKS5, "127.0.0.1", 9050)
 							s1.connect((mining_ip_conf, int(port)))  # connect to pool
-							print("Miner: connected to pool, proceeding to submit solution")
+							print("connected to server, proceeding to submit solution")
 							connections.send(s1, "block", 10)
 							connections.send(s1, self_address, 10)
 							connections.send(s1, block_send, 10)
-							print("Miner: solution submitted to pool")
+							print("solution submitted to cluster")
 							time.sleep(0.2)
 							s1.close()
 
@@ -178,7 +178,7 @@ def runit():
 				p = Process(target=miner, args=(str(q + 1), paddress, db_block_hash, diff, mining_condition, mining_condition_bin, netdiff, hq, thr, dh))
 				p.daemon = True
 				p.start()
-			print("{} miners searching for solutions at difficulty {} and condition {}".format(mining_threads_conf,str(diff),str(mining_condition)))
+			print("{} searching for solutions at tasks {} and {}".format(mining_threads_conf,str(diff),str(mining_condition)))
 	
 			time.sleep(nonce_time)
 			
@@ -188,7 +188,7 @@ def runit():
 				
 			results = [int(hq.get()) for q in instances]
 			dh = sum(results)
-			print("Current total hashrate is {} kh/s".format(str(dh)))
+			print("Current total speed is {} ".format(str(dh)))
 			
 		except Exception as e:
 			print(e)
